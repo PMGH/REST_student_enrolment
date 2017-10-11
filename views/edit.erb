@@ -1,0 +1,39 @@
+<div id="edit_student">
+  <form id="edit_form" action="/hogwarts/<%= @student.id() %>/edit" method="GET">
+
+    <label for="student_id">Student ID:</label>
+    <input type="text" name="id" value="<%= @student.id() %>" id="student_id">
+
+    <label for="firstName">First Name:</label>
+    <input type="text" name="first_name" value="<%= @student.first_name() %>" id="firstName">
+
+    <label for="secondName">Second Name:</label>
+    <input type="text" name="second_name" value="<%= @student.second_name() %>" id="secondName">
+
+    <label for="houseSelect">House:</label>
+    <select name="house_id" required="required" id="houseSelect">
+      <option disabled value> -- Select a House -- </option>
+      <option selected value><%= @student.house().name() %></option>
+
+      <% selected = @student.house().name() %>
+      <% @houses.each do |house| %>
+        <% if house.name() != selected %>
+          <option value="<%= house.id() %>"><%= house.name() %></option>
+        <% end %>
+      <% end %>
+
+    </select>
+
+    <label for="age">Age:</label>
+    <input type="number" required="required" min=10 name="age" value="<%= @student.age() %>" id="age">
+
+    <form action="/hogwarts/<%= @student.id() %>/edit" method="POST" id="amend_details">
+      <input type="submit" value="Amend Details" id="amend_details_button"/>
+    </form>
+
+    <form action="/hogwarts/<%= @student.id() %>/delete" method="POST" id="delete">
+      <input type="submit" value="Delete" id="delete_button"/>
+    </form>
+
+  </form>
+</div>

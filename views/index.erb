@@ -1,0 +1,15 @@
+<!-- for each student in students -->
+<h1>Enrolled Students</h1>
+<div class="all_students">
+  <% @students.each do |student| %>
+  <article class="student">
+    <p>Student ID: <%= student.id() %></p>
+    <p>Name: <%= student.full_name() %></p>
+    <p>House: <%= student.house().name() %></p>
+    <div id="view_edit_buttons">
+      <a class="button" href="/hogwarts/<%= student.id() %>">View</a>
+      <a class="button" href="/hogwarts/<%= student.id() %>/edit">Edit</a>
+    </div>
+  </article>
+  <% end %>
+</div>

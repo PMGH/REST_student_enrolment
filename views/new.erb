@@ -1,0 +1,25 @@
+<div id="new_student">
+  <form id="create_form" action="/hogwarts" method="POST">
+
+    <label for="firstName">First Name:</label>
+    <input type="text" required="required" name="first_name" id="firstName">
+
+    <label for="secondName">Second Name:</label>
+    <input type="text" required="required" name="second_name" id="secondName">
+
+    <label for="houseSelect">House:</label>
+    <select name="house_id" required="required" id="houseSelect">
+      <option disabled selected value> -- Select a House -- </option>
+
+      <% @houses.each do |house| %>
+      <option value="<%= house.id() %>"><%= house.name() %></option>
+      <% end %>
+    </select>
+
+    <label for="age">Age:</label>
+    <input type="number" required="required" min=10 name="age" id="age">
+
+    <input type="submit" value="Enrol" id="enrol_button">
+
+  </form>
+</div>

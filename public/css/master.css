@@ -1,0 +1,125 @@
+body {
+  background: '/images/hogwarts_bg.jpg';
+  background-size: cover;
+  color: white;
+  font-family: 'Noto Serif', serif;
+  margin: 0;
+}
+
+nav {
+  background: #5C4368;
+  display: fixed;
+  top: 0;
+  padding: 20px 0px;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.nav_link {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.nav_link:hover {
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  color: black;
+  margin-left: 8px;
+}
+
+.student {
+  background: #6A7B8C;
+  border-bottom: 1px solid grey;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: 600;
+  margin: 20px 8px;
+  padding: 20px;
+}
+
+.student:nth-child(2n) {
+  background: #BECAD6;
+  color: black;
+}
+
+#edit_form, #create_form {
+  background: #BECAD6;
+  border-radius: 4px;
+  color: #495867;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  padding: 20px;
+  width: 500px;
+}
+
+input, select {
+  margin: 10px 0px;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="submit"] {
+  align-self: center;
+  color: black;
+  width: auto;
+}
+
+#delete_button:hover {
+  color: red;
+}
+
+#amend_details_button:hover, #enrol_button:hover {
+  color: green;
+}
+
+label {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  margin-right: 30px;
+  padding: 5px 10px;
+  width: 50px;
+}
+
+.button:hover {
+  background: black;
+}
+
+#view_edit_buttons {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+img {
+  width: 10%;
+}
+
+#show_student, #create_successful, #delete_successful {
+  margin: 20px 0;
+  color: black;
+  font-weight: bold;
+  padding: 20px;
+}
